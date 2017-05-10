@@ -1,0 +1,191 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: Helvetica, Verdana, sans-serif; }
+
+h1 {
+  font-size: 1.6em; }
+
+h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 1em 0; }
+
+p {
+  font-family: georgia, serif;
+  margin: 10px 0; }
+
+form input {
+  margin: 10px 0;
+  padding: 5px; }
+
+header {
+  background-color: #000;
+  color: #FFF;
+  padding: 10px;
+  position: relative; }
+  header h1 {
+    font-size: 1.5em; }
+  header nav {
+    position: absolute;
+    top: 15px;
+    right: 10px; }
+    header nav li {
+      float: right; }
+    header nav a {
+      color: #FFF; }
+
+footer {
+  background-color: #000;
+  bottom: 0;
+  color: #FFF;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  right: 0; }
+
+.main-content {
+  padding: 10px 10px 50px 10px; }
+
+.card-editor input {
+  display: block;
+  margin: 20px 0; }
+
+.card-list {
+  border: solid 1px blue; }
+
+.set-list .create-set {
+  display: block; }
+
+.set-list .sorting {
+  border: solid 1px #000;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 20px; }
+  .set-list .sorting div {
+    float: left; }
+  .set-list .sorting div:first-child {
+    margin-right: 40px; }
+
+.set-list .sorting.by-name .by-name {
+  font-weight: bold; }
+
+.set-list .sorting.by-name .by-card-count {
+  color: #666; }
+
+.set-list .sorting.by-count .by-card-count {
+  font-weight: bold; }
+
+.set-list .sorting.by-count .by-name {
+  color: #666; }
+
+.set-list .set {
+  border: solid 1px #000;
+  margin: 10px 0;
+  max-width: 400px;
+  padding: 10px; }
+
+.set-list .set-name {
+  float: left;
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+.set-list p {
+  clear: both; }
+
+.set-list .number-of-cards {
+  color: #888;
+  float: right;
+  text-align: right; }
+
+.set-list .button {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px; }
+
+.set-list .button:hover {
+  color: #DDD; }
+
+.set-editor input {
+  display: block; }
+
+.set-component .card {
+  border: solid 1px #000;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  float: left;
+  margin: 5px 2%;
+  padding: 20px;
+  width: 42%; }
+
+.set-component .front {
+  margin: 5px 0; }
+
+.set-component .controls li {
+  margin: 10px 0; }
+
+.quizzer .card {
+  border: solid 1px #000;
+  max-width: 300px;
+  padding: 100px; }
+
+.quizzer .card-navigation div {
+  display: inline-block;
+  padding: 10px; }
+
+.quizzer .summary-choices div {
+  display: inline-block;
+  margin: 20px 20px 20px 0; }
+
+.quiz-summary-component .correct, .quiz-summary-component .incorrect, .quiz-summary-component .skipped {
+  margin: 10px 0; }
+
+.quiz-summary-component canvas {
+  border: solid 1px #000; }

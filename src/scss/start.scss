@@ -1,0 +1,44 @@
+@import 'reset';
+
+body {
+  font-family: Helvetica, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+p {
+  font-family: georgia, serif;
+  margin: 10px 0;
+}
+
+form input {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+@import 'header';
+@import 'footer';
+
+.main-content {
+  padding: 10px 10px 50px 10px;
+}
+
+// @import 'pages/login';
+// @import 'pages/create-account';
+
+
+@import 'components/card-editor';
+@import 'components/card-list';
+@import 'components/set-list';
+@import 'components/set-editor';
+@import 'components/set-component';
+@import 'components/quizzer';
+@import 'components/quiz-summary-component';

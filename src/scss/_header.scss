@@ -1,0 +1,26 @@
+header {
+  background-color: #000;
+  color: #FFF;
+  padding: 10px;
+  position: relative;
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+
+  nav {
+
+    position: absolute;
+    top: 15px;
+    right: 10px;
+
+    li {
+      float: right;
+    }
+
+    a {
+      color: #FFF;
+    }
+  }
+}

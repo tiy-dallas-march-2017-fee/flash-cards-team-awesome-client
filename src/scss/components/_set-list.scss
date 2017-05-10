@@ -1,0 +1,76 @@
+.set-list {
+
+  .create-set {
+    display: block;
+  }
+
+  .sorting {
+    border: solid 1px #000;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 20px;
+
+    div {
+      float: left;
+    }
+
+    div:first-child {
+      margin-right: 40px;
+    }
+  }
+
+  .sorting.by-name {
+     .by-name {
+       font-weight: bold;
+     }
+
+     .by-card-count {
+       color: #666;
+     }
+  }
+
+  .sorting.by-count {
+    .by-card-count {
+      font-weight: bold;
+    }
+
+    .by-name {
+      color: #666;
+    }
+  }
+
+  .set {
+    border: solid 1px #000;
+    margin: 10px 0;
+    max-width: 400px;
+    padding: 10px;
+  }
+
+  .set-name {
+    float: left;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  p {
+    clear: both;
+  }
+
+  .number-of-cards {
+    color: #888;
+    float: right;
+    text-align: right;
+  }
+
+  .button {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .button:hover {
+    color: #DDD;
+  }
+}

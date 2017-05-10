@@ -1,0 +1,10 @@
+.quiz-summary-component {
+
+  .correct, .incorrect, .skipped {
+    margin: 10px 0;
+  }
+
+  canvas {
+    border: solid 1px #000;
+  }
+}
