@@ -4,13 +4,21 @@ import UserData from './../UserData.js';
 class CardEditorComponent extends React.Component {
 
   submitCard(evt) {
+
+    // Prevents the default submit action, adds card to the set, updates the store with the current data, clears the input boxes in the form.
     evt.preventDefault();
 
     var cb = () => {
-      this.props.history.goBack();
+      this.frontInput.value = '';
+      this.backInput.value = '';
     };
 
     UserData.addCardToSet(this.props.setId, this.frontInput.value, this.backInput.value, cb);
+  }
+
+  returnToPrev() {
+    // Returns to the SetViewComponent page.
+    this.props.history.goBack();
   }
 
   render() {
@@ -27,9 +35,10 @@ class CardEditorComponent extends React.Component {
 
       </form>
 
+        <button onClick={() => { this.returnToPrev(); }}>Done</button>
+
     </div>;
   }
-
 }
 
 module.exports = CardEditorComponent;

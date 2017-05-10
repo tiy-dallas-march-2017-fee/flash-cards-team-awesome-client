@@ -96,6 +96,10 @@ footer {
   display: block;
   margin: 20px 0; }
 
+.card-editor button {
+  float: left;
+  margin: 0 5px; }
+
 .card-list {
   border: solid 1px blue; }
 
