@@ -17,8 +17,8 @@ class SetEditorComponent extends React.Component {
 
         <input placeholder="name" ref={(input) => { this.nameInput = input; }} />
 
-        <input placeholder="description" ref={(input) => { this.descriptionInput = input; }} />
-
+        <textarea rows="5" cols="40" placeholder="description" ref={(input) => { this.descriptionInput = input; }} />
+        <br></br>
         <button>Save</button>
       </form>
     </div>

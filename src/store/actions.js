@@ -6,6 +6,7 @@ const SHUFFLE_CARDS = { type: constants.SHUFFLE_CARDS };
 const START_QUIZ = { type: constants.START_QUIZ };
 const QUIZ_CARD_CORRECT = { type: constants.QUIZ_CARD_CORRECT };
 const QUIZ_CARD_INCORRECT = { type: constants.QUIZ_CARD_INCORRECT };
+const QUIZ_CARD_SKIP = { type: constants.QUIZ_CARD_SKIP };
 
 const actions = {
   LOAD_SETS: LOAD_SETS,
@@ -13,7 +14,8 @@ const actions = {
   SHUFFLE_CARDS: SHUFFLE_CARDS,
   START_QUIZ: START_QUIZ,
   QUIZ_CARD_CORRECT: QUIZ_CARD_CORRECT,
-  QUIZ_CARD_INCORRECT: QUIZ_CARD_INCORRECT
+  QUIZ_CARD_INCORRECT: QUIZ_CARD_INCORRECT,
+  QUIZ_CARD_SKIP: QUIZ_CARD_SKIP
 };
 
 module.exports = actions;

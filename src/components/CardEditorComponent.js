@@ -17,7 +17,7 @@ class CardEditorComponent extends React.Component {
   }
 
   returnToPrev() {
-    // Returns to the SetViewComponent page. 
+    // Returns to the SetViewComponent page.
     this.props.history.goBack();
   }
 
@@ -39,7 +39,6 @@ class CardEditorComponent extends React.Component {
 
     </div>;
   }
-
 }
 
 module.exports = CardEditorComponent;
