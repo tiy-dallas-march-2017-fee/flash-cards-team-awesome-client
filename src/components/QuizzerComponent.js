@@ -11,7 +11,7 @@ class QuizzerComponent extends React.Component {
     this.state = store.getState();
   }
 
-  componentDidMount() {
+  beginQuiz() {
     this.unsub = store.subscribe(() => this.setState(store.getState()));
 
     var cb = (set) => {
@@ -20,6 +20,10 @@ class QuizzerComponent extends React.Component {
     };
 
     UserData.getSet(this.props.setId, cb);
+  }
+
+  componentDidMount() {
+    this.beginQuiz();
   }
 
   componentWillUnmount() {
@@ -72,15 +76,15 @@ class QuizzerComponent extends React.Component {
         <div>Card count: {this.state.quizzer.cards.length}</div>
         <div
           className="card"
-          onClick={(evt) => { this.cardClicked(evt); }}>
+          onClick={(evt) => {this.cardClicked(evt)}}>
           {textToShow}</div>
       </div>
 
 
       cardNavigation = <div className="card-navigation">
-        <div className="correct" onClick={() => { this.markCorrect();}}>Correct</div>
-        <div className="incorrect" onClick={() => {this.markIncorrect();}}>Incorrect</div>
-        <div className="skip">Skip</div>
+        <div className="correct button" onClick={() => {this.markCorrect()}}>Correct</div>
+        <div className="incorrect button" onClick={() => {this.markIncorrect()}}>Incorrect</div>
+        <div className="skip button" onClick={() => {this.skip()}}>Skip</div>
 
       </div>;
     }
@@ -91,8 +95,8 @@ class QuizzerComponent extends React.Component {
         skipped={this.state.quizzer.skippedCount} />
 
       summaryNavigation = <div className="summary-choices">
-          <div>Quiz again</div>
-          <div onClick={() => this.backToSetList()}>Back to set list</div>
+          <div className="button" onClick={() => this.beginQuiz()}>Quiz again</div>
+          <div className="button" onClick={() => this.backToSetList()}>Back to set list</div>
         </div>;
     }
 

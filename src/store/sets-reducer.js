@@ -13,7 +13,7 @@ const reducer = (state = initialState, action) => {
 
       let copy = state.list.slice();
       if (action.sort === 'name') {
-        copy.sort((a, b) => { return a.name > b.name; });
+        copy.sort((a, b) => { return a.name.toLowerCase() > b.name.toLowerCase(); });
       }
       else {
         copy.sort((a, b) => { return a.cards.length < b.cards.length; });

@@ -38,6 +38,11 @@ const reducer = (state = initialState, action) => {
         currentCard: state.currentCard + 1,
         incorrectCount: state.incorrectCount + 1
       });
+    case constants.QUIZ_CARD_SKIP:
+      return Object.assign({}, state, {
+        currentCard: state.currentCard + 1,
+        skippedCount: state.skippedCount + 1
+      });
     default:
       return state;
   }

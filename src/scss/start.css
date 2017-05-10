@@ -69,16 +69,20 @@ header {
   color: #FFF;
   padding: 10px;
   position: relative; }
-  header h1 {
-    font-size: 1.5em; }
-  header nav {
-    position: absolute;
-    top: 15px;
-    right: 10px; }
-    header nav li {
-      float: right; }
-    header nav a {
-      color: #FFF; }
+
+header h1 {
+  font-size: 1.5em; }
+
+header nav {
+  position: absolute;
+  top: 15px;
+  right: 10px; }
+
+header nav li {
+  float: right; }
+
+header nav a {
+  color: #FFF; }
 
 footer {
   background-color: #000;
@@ -107,10 +111,12 @@ footer {
   display: inline-block;
   margin: 10px 0;
   padding: 20px; }
-  .set-list .sorting div {
-    float: left; }
-  .set-list .sorting div:first-child {
-    margin-right: 40px; }
+
+.set-list .sorting div {
+  float: left; }
+
+.set-list .sorting div:first-child {
+  margin-right: 40px; }
 
 .set-list .sorting.by-name .by-name {
   font-weight: bold; }
@@ -148,7 +154,8 @@ footer {
   color: white;
   display: inline-block;
   margin: 5px;
-  padding: 10px; }
+  padding: 10px;
+  cursor: pointer; }
 
 .set-list .button:hover {
   color: #DDD; }
@@ -183,6 +190,14 @@ footer {
 .quizzer .summary-choices div {
   display: inline-block;
   margin: 20px 20px 20px 0; }
+
+.quizzer .button {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer; }
 
 .quiz-summary-component .correct, .quiz-summary-component .incorrect, .quiz-summary-component .skipped {
   margin: 10px 0; }
