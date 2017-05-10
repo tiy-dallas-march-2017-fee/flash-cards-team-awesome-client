@@ -154,7 +154,8 @@ footer {
   color: white;
   display: inline-block;
   margin: 5px;
-  padding: 10px; }
+  padding: 10px;
+  cursor: pointer; }
 
 .set-list .button:hover {
   color: #DDD; }
@@ -189,6 +190,14 @@ footer {
 .quizzer .summary-choices div {
   display: inline-block;
   margin: 20px 20px 20px 0; }
+
+.quizzer .button {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer; }
 
 .quiz-summary-component .correct, .quiz-summary-component .incorrect, .quiz-summary-component .skipped {
   margin: 10px 0; }

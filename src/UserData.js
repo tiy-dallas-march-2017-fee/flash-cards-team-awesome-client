@@ -14,7 +14,7 @@ let UserData = {
       url: `${URL}/api/sets`
     })
     .done((data) => {
-
+      
       const action = Object.assign({}, actions.LOAD_SETS, { sets: data.sets })
       store.dispatch(action);
 
