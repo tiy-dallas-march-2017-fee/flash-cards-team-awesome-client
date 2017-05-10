@@ -46,8 +46,14 @@ class SetListComponent extends React.Component {
     this.props.history.push('/set/' + setId);
   }
 
-  navigateToQuiz(setId) {
-    this.props.history.push('/set/' + setId + '/quizzer');
+  navigateToQuiz(set) {
+    if (set.cards.length===0){
+      return
+    }
+    else {
+      this.props.history.push('/set/' + set.id + '/quizzer');
+
+    }
   }
 
   render() {
@@ -77,7 +83,7 @@ class SetListComponent extends React.Component {
 
           <div className="button delete-set" onClick={() => {this.deleteSet(set.id)}}>delete</div>
           <div className="button add-cards" onClick={() => {this.addCards(set.id)}}>add cards</div>
-          <div className="button quiz" onClick={() => {this.navigateToQuiz(set.id)}}>quiz</div>
+          <div className="button quiz" onClick={() => {this.navigateToQuiz(set)}}>quiz</div>
 
         </li>
       })}
