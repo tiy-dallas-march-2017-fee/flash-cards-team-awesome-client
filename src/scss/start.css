@@ -70,6 +70,10 @@ header {
   padding: 10px;
   position: relative; }
 
+header a {
+  text-decoration: none;
+  color: #FFF; }
+
 header h1 {
   font-size: 1.5em; }
 
@@ -207,6 +211,4 @@ footer {
   margin: 10px 0; }
 
 .quiz-summary-component canvas {
-  border: solid 1px #000; }
-{
   border: solid 1px #000; }

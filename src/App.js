@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import SetListComponent from './components/SetListComponent.js';
 import SetEditorComponent from './components/SetEditorComponent.js';
@@ -18,7 +18,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <header>
-            <h1>A Flash Card App</h1>
+            <h1><Link to="/">A Flash Card App</Link></h1>
           </header>
           <div className="main-content">
               <div>
