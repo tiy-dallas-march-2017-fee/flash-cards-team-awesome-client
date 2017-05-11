@@ -84,6 +84,7 @@ class QuizzerComponent extends React.Component {
         <div className="correct button" onClick={() => {this.markCorrect()}}>Correct</div>
         <div className="incorrect button" onClick={() => {this.markIncorrect()}}>Incorrect</div>
         <div className="skip button" onClick={() => {this.skip()}}>Skip</div>
+        <div className="quit button" onClick={() => {this.backToSetList()}}>End Quiz</div>
 
       </div>;
     }

@@ -27,7 +27,6 @@ class App extends Component {
                 <Route path="/set/:setId" exact component={SetViewComponent} />
                 <Route path="/set/:setId/newcard" render={(props) => <CardEditorComponent history={props.history} setId={props.match.params.setId} />} />
                 <Route path="/set/:setId/quizzer" render={(props) => <QuizzerComponent history={props.history} setId={props.match.params.setId} />} />
-
               </div>
           </div>
           <footer>
