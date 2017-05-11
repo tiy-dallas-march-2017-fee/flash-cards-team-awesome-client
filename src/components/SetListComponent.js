@@ -29,7 +29,9 @@ class SetListComponent extends React.Component {
     this.unsub();
   }
 
-  sortByName() {
+  sortByName(evt) {
+    console.log(evt.target.className);
+    console.log(evt);
     const action = Object.assign({}, actions.CHANGE_SORT, { sort: 'name' });
     store.dispatch(action);
   }
@@ -66,7 +68,7 @@ class SetListComponent extends React.Component {
       <Link to="/create-set" className="create-set">Create new set</Link>
 
       <div className="sorting">
-        <div className="by-name {this.blah}" onClick={() => this.sortByName() }>by name</div>
+        <div className="by-name {this.blah}" onClick={(evt) => this.sortByName(evt) }>by name</div>
         <div className="by-card-count {this.blah}" onClick={() => this.sortByCardCount() }>by # of cards</div>
       </div>
 
