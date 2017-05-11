@@ -69,19 +69,24 @@ header {
   color: #FFF;
   padding: 10px;
   position: relative; }
-  header a {
-    text-decoration: none;
-    color: #FFF; }
-  header h1 {
-    font-size: 1.5em; }
-  header nav {
-    position: absolute;
-    top: 15px;
-    right: 10px; }
-    header nav li {
-      float: right; }
-    header nav a {
-      color: #FFF; }
+
+header a {
+  text-decoration: none;
+  color: #FFF; }
+
+header h1 {
+  font-size: 1.5em; }
+
+header nav {
+  position: absolute;
+  top: 15px;
+  right: 10px; }
+
+header nav li {
+  float: right; }
+
+header nav a {
+  color: #FFF; }
 
 footer {
   background-color: #000;
@@ -114,10 +119,12 @@ footer {
   display: inline-block;
   margin: 10px 0;
   padding: 20px; }
-  .set-list .sorting div {
-    float: left; }
-  .set-list .sorting div:first-child {
-    margin-right: 40px; }
+
+.set-list .sorting div {
+  float: left; }
+
+.set-list .sorting div:first-child {
+  margin-right: 40px; }
 
 .set-list .sorting.by-name .by-name {
   font-weight: bold; }
