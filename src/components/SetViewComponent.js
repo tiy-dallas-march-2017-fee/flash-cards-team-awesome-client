@@ -29,10 +29,12 @@ class SetViewComponent extends React.Component {
     }
 
     var cardList;
+    let quizzerButton;
     if (currentSet.cards.length === 0) {
       cardList = <div>You have no cards.</div>
     }
     else {
+      quizzerButton = <li><Link to={'/set/' + this.props.match.params.setId + '/quizzer'}>Quizzer</Link></li>
       cardList = <ul>
         {currentSet.cards.map((card) => {
           return <li key={card.id} className="card">
@@ -42,14 +44,14 @@ class SetViewComponent extends React.Component {
         })}
       </ul>;
     }
-
+    console.log(this.state.sets.list)
     return <div className="set-component">
       <h2>Set: {currentSet.name} (id: {this.props.match.params.setId})</h2>
 
       <div className="controls">
         <ul>
           <li><Link to={'/set/' + this.props.match.params.setId + '/newcard'}>Add a New Card</Link></li>
-          <li><Link to={'/set/' + this.props.match.params.setId + '/quizzer'}>Quizzer</Link></li>
+          {quizzerButton}
         </ul>
 
 
