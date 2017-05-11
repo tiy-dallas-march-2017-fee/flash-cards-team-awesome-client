@@ -21,6 +21,11 @@ const reducer = (state = initialState, action) => {
         copy.sort((a, b) => { return a.cards.length < b.cards.length; });
       }
       return Object.assign({}, state, { list: copy, sortSetsBy: action.sort });
+
+    case constants.DELETE_SET:
+        let copy2 = state.list.slice().filter((x) => x.id !== action.setId);
+        return Object.assign({}, state, { list: copy2 });
+
     default:
       return state;
   }

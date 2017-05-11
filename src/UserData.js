@@ -14,7 +14,7 @@ let UserData = {
       url: `${URL}/api/sets`
     })
     .done((data) => {
-      
+
       const action = Object.assign({}, actions.LOAD_SETS, { sets: data.sets })
       store.dispatch(action);
 
@@ -55,14 +55,12 @@ let UserData = {
     });
   },
 
-  deleteSet: (setId, cb) => {
+  deleteSet: (setId) => {
     $.ajax({
       url: `${URL}/api/sets/${setId}`,
       method: 'DELETE'
     })
-    .done(() => {
-      cb();
-    });
+    .done();
   },
 
 

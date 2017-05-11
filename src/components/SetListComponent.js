@@ -40,7 +40,8 @@ class SetListComponent extends React.Component {
   }
 
   deleteSet(setId) {
-    UserData.deleteSet(setId, () => this.loadSets());
+    UserData.deleteSet(setId);
+    store.dispatch(Object.assign({}, actions.DELETE_SET, { setId: setId }));
   }
 
   addCards(setId) {

@@ -7,6 +7,7 @@ const START_QUIZ = { type: constants.START_QUIZ };
 const QUIZ_CARD_CORRECT = { type: constants.QUIZ_CARD_CORRECT };
 const QUIZ_CARD_INCORRECT = { type: constants.QUIZ_CARD_INCORRECT };
 const QUIZ_CARD_SKIP = { type: constants.QUIZ_CARD_SKIP };
+const DELETE_SET = { type: constants.DELETE_SET};
 
 const actions = {
   LOAD_SETS: LOAD_SETS,
@@ -15,7 +16,8 @@ const actions = {
   START_QUIZ: START_QUIZ,
   QUIZ_CARD_CORRECT: QUIZ_CARD_CORRECT,
   QUIZ_CARD_INCORRECT: QUIZ_CARD_INCORRECT,
-  QUIZ_CARD_SKIP: QUIZ_CARD_SKIP
+  QUIZ_CARD_SKIP: QUIZ_CARD_SKIP,
+  DELETE_SET: DELETE_SET
 };
 
 module.exports = actions;
