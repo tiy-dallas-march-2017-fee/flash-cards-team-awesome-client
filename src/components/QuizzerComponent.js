@@ -12,17 +12,16 @@ class QuizzerComponent extends React.Component {
   }
 
   beginQuiz() {
-    this.unsub = store.subscribe(() => this.setState(store.getState()));
-
     var cb = (set) => {
       const action = Object.assign({}, actions.START_QUIZ, { set: set });
       store.dispatch(action);
     };
-
+    //maybe put this in componentDidMount
     UserData.getSet(this.props.setId, cb);
   }
 
   componentDidMount() {
+    this.unsub = store.subscribe(() => this.setState(store.getState()));
     this.beginQuiz();
   }
 

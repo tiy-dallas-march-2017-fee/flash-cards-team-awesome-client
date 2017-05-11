@@ -3,7 +3,7 @@ import UserData from './../UserData.js';
 import { Link } from 'react-router-dom';
 import { store, actions } from './../store/store.js';
 
-console.log(UserData);
+console.log(store);
 class SetListComponent extends React.Component {
 
   constructor() {
@@ -30,7 +30,6 @@ class SetListComponent extends React.Component {
   }
 
   sortByName(evt) {
-    console.log(evt.target.className);
     console.log(evt);
     const action = Object.assign({}, actions.CHANGE_SORT, { sort: 'name' });
     store.dispatch(action);
@@ -50,8 +49,14 @@ class SetListComponent extends React.Component {
     this.props.history.push('/set/' + setId);
   }
 
-  navigateToQuiz(setId) {
-    this.props.history.push('/set/' + setId + '/quizzer');
+  navigateToQuiz(set) {
+    console.log(set);
+    if(set.cards.length === 0){
+      alert('There\'s no flashcards in there!')
+    }
+    else{
+      this.props.history.push('/set/' + set.id + '/quizzer');
+    }
   }
 
   render() {
@@ -81,7 +86,7 @@ class SetListComponent extends React.Component {
 
           <div className="button delete-set" onClick={() => {this.deleteSet(set.id)}}>delete</div>
           <div className="button add-cards" onClick={() => {this.addCards(set.id)}}>add cards</div>
-          <div className="button quiz" onClick={() => {this.navigateToQuiz(set.id)}}>quiz</div>
+          <div className="button quiz" onClick={() => {this.navigateToQuiz(set)}}>quiz</div>
 
         </li>
       })}

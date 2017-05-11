@@ -12,7 +12,9 @@ const reducer = (state = initialState, action) => {
     case constants.CHANGE_SORT:
 
       let copy = state.list.slice();
+
       if (action.sort === 'name') {
+        console.log(action);
         copy.sort((a, b) => { return a.name.toLowerCase() > b.name.toLowerCase(); });
       }
       else {
