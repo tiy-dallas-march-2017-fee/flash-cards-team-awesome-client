@@ -30,7 +30,7 @@ class SetListComponent extends React.Component {
   }
 
   sortByName(evt) {
-    console.log(evt);
+    // console.log(evt);
     const action = Object.assign({}, actions.CHANGE_SORT, { sort: 'name' });
     store.dispatch(action);
   }
@@ -64,7 +64,10 @@ class SetListComponent extends React.Component {
     if (this.state.sets.list.length === 0) {
       noSetsMessaging = <p>You do not have any sets! Create one.</p>
     }
-
+    var sorts = this.state.sets.sortSetsBy;
+    // console.log('SLC', this.state.sets.sortSetsBy);
+    var className = (sorts  === 'name' ? 'sorting by-name' : 'sorting by-count')
+    // console.log('className', className)
     return <div className="set-list">
       <h2>Set List</h2>
 
@@ -72,9 +75,9 @@ class SetListComponent extends React.Component {
 
       <Link to="/create-set" className="create-set">Create new set</Link>
 
-      <div className="sorting">
-        <div className="by-name {this.blah}" onClick={(evt) => this.sortByName(evt) }>by name</div>
-        <div className="by-card-count {this.blah}" onClick={() => this.sortByCardCount() }>by # of cards</div>
+      <div className={className}>
+        <div className="by-name" onClick={(evt) => this.sortByName(evt) }>by name</div>
+        <div className="by-card-count" onClick={() => this.sortByCardCount() }>by # of cards</div>
       </div>
 
       <ul>
